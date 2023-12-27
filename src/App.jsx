@@ -1,6 +1,6 @@
 import AppName from "./Components/AppName";
 import AddTodo from "./Components/AddTodo";
-import TodoItems from "./Components/Todoitems";
+import TodoItems from "./Components/TodoItems";
 import WelcomeMessage from "./Components/WelcomeMessage";
 import { useState } from "react";
 import "./App.css";
