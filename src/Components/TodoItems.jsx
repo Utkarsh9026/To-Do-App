@@ -1,20 +1,21 @@
-import { useContext } from "react";
 import TodoItem from "./TodoItem";
-import { TodoItemsContext } from "../store/todo-item-store";
+// import { TodoItemsContext } from "../store/todo-item-store";
+// import { useContext } from "react";
 
 const TodoItems = ({ todoItems, onDeleteClick }) => {
-  const todoItemsFromContext = useContext(TodoItemsContext);
+  // const todoItemsFromContext = useContext(TodoItemsContext);
 
   return (
     <div className="items-container">
-      {todoItems.map((item) => (
-        <TodoItem
-          key={item.name}
-          todoDate={item.dueDate}
-          todoName={item.name}
-          onDeleteClick={onDeleteClick}
-        ></TodoItem>
-      ))}
+      {todoItems &&
+        todoItems.map((item) => (
+          <TodoItem
+            key={item.name}
+            todoDate={item.dueDate}
+            todoName={item.name}
+            onDeleteClick={onDeleteClick}
+          ></TodoItem>
+        ))}
     </div>
   );
 };
